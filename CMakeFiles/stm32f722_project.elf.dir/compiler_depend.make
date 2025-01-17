@@ -9,13 +9,13 @@ CMakeFiles/stm32f722_project.elf.dir/src/main.c.o: src/main.c \
   include/mpu_armv7.h \
   include/stm32f722xx.h \
   include/system_stm32f7xx.h \
-  /usr/arm-none-eabi/include/_newlib_version.h \
-  /usr/arm-none-eabi/include/machine/_default_types.h \
-  /usr/arm-none-eabi/include/stdint.h \
-  /usr/arm-none-eabi/include/sys/_intsup.h \
-  /usr/arm-none-eabi/include/sys/_stdint.h \
-  /usr/arm-none-eabi/include/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h
+  /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h
 
 CMakeFiles/stm32f722_project.elf.dir/src/system_stm32f7xx.c.o: src/system_stm32f7xx.c \
   include/cmsis_compiler.h \
@@ -35,35 +35,19 @@ CMakeFiles/stm32f722_project.elf.dir/src/system_stm32f7xx.c.o: src/system_stm32f
   /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h
 
 
+src/system_stm32f7xx.c:
+
 /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h:
 
 /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/features.h:
 
-/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h:
-
-/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h:
-
-src/system_stm32f7xx.c:
-
-/usr/arm-none-eabi/include/sys/features.h:
-
 src/main.c:
-
-/usr/arm-none-eabi/include/machine/_default_types.h:
-
-/usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h:
 
 include/cmsis_compiler.h:
 
 include/system_stm32f7xx.h:
 
 include/cmsis_gcc.h:
-
-/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h:
-
-include/stm32f7xx.h:
-
-/usr/arm-none-eabi/include/stdint.h:
 
 include/cmsis_version.h:
 
@@ -75,10 +59,12 @@ include/mpu_armv7.h:
 
 include/stm32f722xx.h:
 
+/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/_newlib_version.h:
+
+/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h:
+
+include/stm32f7xx.h:
+
+/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h:
+
 /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h:
-
-/usr/arm-none-eabi/include/_newlib_version.h:
-
-/usr/arm-none-eabi/include/sys/_intsup.h:
-
-/usr/arm-none-eabi/include/sys/_stdint.h:
