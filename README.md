@@ -1,1 +1,1 @@
-# stm32-clean-setup
+# STM32F722ZE NUCLEO BOARD CLEAN SETUP
