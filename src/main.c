@@ -30,8 +30,6 @@ int main(void) {
     // LED Toggle
    // GPIOB->ODR ^= (1U << 0);
 
-
-
   }
 }
 
@@ -49,45 +47,45 @@ void LED_INIT(void){
 }
 
 void GPIO_Init(void) {
-    // GPIOB için saat etkinleştirme (Mavi LED PB7'de)
+    // Clock enable for GPIOB (Blue LED on PB7)
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
 
-    // PB7'yi çıkış olarak ayarla
-    GPIOB->MODER &= ~(3 << (7 * 2)); // MODER7'i sıfırla
-    GPIOB->MODER |= (1 << (7 * 2));  // MODER7'i output olarak ayarla
+    // Set PB7 as output
+    GPIOB->MODER &= ~(3 << (7 * 2)); 
+    GPIOB->MODER |= (1 << (7 * 2));  
 
-    // GPIOC için saat etkinleştirme (Buton PC13'te)
+    // GPIOC clock enable (Buton PC13'te)
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
 
-    // PC13'ü giriş olarak ayarla
-    GPIOC->MODER &= ~(3 << (13 * 2)); // MODER13'ü sıfırla
+    // SET PC13 as a input
+    GPIOC->MODER &= ~(3 << (13 * 2)); =
 }
 
 void EXTI_Init(void) {
-    // SYSCFG saat etkinleştirme
+    // SYSCFG clock enable
     RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
 
-    // PC13'ü EXTI13'e bağla
-    SYSCFG->EXTICR[3] &= ~(0xF << 4); // EXTI13'ü sıfırla
-    SYSCFG->EXTICR[3] |= (2 << 4);    // EXTI13'ü GPIOC'ye bağla
+    // Connect PC13 to EXTI13
+    SYSCFG->EXTICR[3] &= ~(0xF << 4); 
+    SYSCFG->EXTICR[3] |= (2 << 4);    // Connect EXTI13 to GPIOC
 
-    // EXTI13'ü düşen kenar tetikleme için ayarla
+    // Set EXTI13 for falling edge triggering
     EXTI->FTSR |= EXTI_FTSR_TR13;
 
-    // EXTI13 kesmesini etkinleştir
+    // Enable EXTI13 interrupt
     EXTI->IMR |= EXTI_IMR_MR13;
 
-    // NVIC'de EXTI15_10 kesmesini etkinleştir
+    // Enable EXTI15_10 interrupt in NVIC
     NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 
 void EXTI15_10_IRQHandler(void) {
-    // EXTI13 kesmesi kontrolü
+   
     if (EXTI->PR & EXTI_PR_PR13) {
-        // Kesme bayrağını temizle
+        // Clear interrupt flag
         EXTI->PR |= EXTI_PR_PR13;
 
-        // Mavi LED'i toggle et
+        // Toggle blue LED
         GPIOB->ODR ^= (1 << 7);
     }
 }
